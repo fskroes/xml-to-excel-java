@@ -45,6 +45,7 @@ public class XmlToExcel {
                 initXls();
 
                 /* Directory of the xml files that needs to parsed */
+                /* Example:  ~/Documents/xmlfiles */
                 File[] arrayOfFiles = getXMLFiles(new File("ENTER DIRECTORY HERE"));
 
                 getAndReadXml(arrayOfFiles);
@@ -57,6 +58,7 @@ public class XmlToExcel {
             initXls();
 
             /* Directory of the xml files that needs to parsed */
+            /* Example:  ~/Documents/xmlfiles */
             File[] arrayOfFiles = getXMLFiles(new File("ENTER DIRECTORY HERE"));
 
             getAndReadXml(arrayOfFiles);
@@ -229,6 +231,7 @@ public class XmlToExcel {
         System.out.println("Node : " + nodes);
 
         /* Enter the directory where you want the Excel file to be saved */
+        /* Example : ~/Documents/parsedxmlfiles.xlsx */
         FileOutputStream fileOut = new FileOutputStream("ENTER DIRECTORY HERE");
         workbook.write(fileOut);
         workbook.close();
